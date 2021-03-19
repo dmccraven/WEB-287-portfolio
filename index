@@ -1,0 +1,82 @@
+<!-- DAVID MCCRAVEN 12/01/2020 -->
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>David McCraven Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SCRIPT FOR MOBILE NAVBAR -->
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+        </script>
+</head>
+<body>
+    <div class="grid-container-main">
+        <div class="nav">
+          <img class="header" src="images/DM-title.png" alt="David McCraven header logo">
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="digigal.html">Digital</a></li>
+            <li><a href="drawgal.html">Drawings</a></li>
+            <li><a href="photogal.html">Photography</a></li>
+            <li><a href="webgal.html">Websites</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div id="main">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+            <img src="images/DM-title.png" alt="David McCraven header logo" style="float: right;">
+          </div>
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9447;</a>
+            <a href="index.html">Home</a>
+            <a href="digigal.html">Digital</a>
+            <a href="drawgal.html">Drawings</a>
+            <a href="photogal.html">Photography</a>
+            <a href="webgal.html">Websites</a>
+            <a href="about.html">About</a>
+            </div>
+    </div>
+        <div class="digital">
+            <figure>
+            <a href="digigal.html">
+            <img src="images/buttonsDigi.jpg" alt="Digital Gallery" style="width:100%"></a>
+          </figure>
+        </div>
+        <div class="drawing">
+            <figure>
+                <a href="drawgal.html">
+                <img src="images/buttonsDraw.jpg" alt="Drawing Gallery" style="width:100%"></a>
+              </figure>
+        </div>
+        <div class="photo">
+            <figure>
+                <a href="photogal.html">
+                <img src="images/buttonsPhoto.jpg" alt="Photo Gallery" style="width:100%"></a>
+              </figure>
+        </div>
+        <div class="web">
+            <figure>
+                <a href="webgal.html">
+                <img src="images/buttonsWeb.jpg" alt="Website Gallery" style="width:100%"></a>
+              </figure>
+        </div>
+        <div id="footer" class="footer">
+            <a href="mailto:someone@yoursite.com" class="fa fa-envelope"></a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="https://dmccraven.wordpress.com/2020/07/13/example-post-3/" target="_blank" rel="noopener noreferrer" class="fa fa-wordpress"></a>
+        </div>
+      </div>
+</body>
+</html>
