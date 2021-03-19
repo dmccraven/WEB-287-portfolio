@@ -1,0 +1,192 @@
+/*DAVID MCCRAVEN*/
+/*12/01/2020*/
+
+/*GLOBAL*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, Helvetica, sans-serif;
+  font-variant: small-caps;
+  color: rgb(231, 231, 231);}
+
+body {background-color: black;}
+
+img {border-radius: 8%;}
+
+p {padding: 20px; font-family: Arial; font-variant: none;}
+
+/*SCROLLBAR*/
+::-webkit-scrollbar {width: 15px;}
+::-webkit-scrollbar-track {background: black;}
+::-webkit-scrollbar-thumb {background: white;}
+::-webkit-scrollbar-thumb:hover {background: grey;}
+
+/*GRID CONTAINER MAIN PAGE*/
+.grid-container-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+  gap: 0px 0px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+  grid-template-areas:
+    "nav"
+    "digital"
+    "drawing"
+    "photo"
+    "web"
+    "footer";}
+
+.header {display: none;}
+
+/*GRID CONTAINER ABOUT PAGE*/
+.grid-container-about {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 0px 0px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+  grid-template-areas:
+    "nav"
+    "info"
+    "footer";}
+
+.header {display: none;}
+
+/*SITE NAVIGATION*/
+.nav { 
+  grid-area: nav;
+  font-size: 1.3em;
+  z-index: 5;
+  background-color: black;}
+
+.nav a {
+  text-align: center;
+  padding: 12px 20px 12px 20px;
+  display: none;
+  text-decoration: none;}
+
+.nav ul {list-style: none;}
+
+.nav li a:hover {
+  background-color: rgb(231, 231, 231);
+  color: black;
+  border-radius: 10%;}
+
+/*MOBILE SIDE NAVBAR*/
+.sidenav {
+  height: 35%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(231, 231, 231);
+  display: block;
+  transition: 0.3s;}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;}
+
+#main {
+  transition: margin-left .5s;
+  padding-left: 15px;}
+
+.digital { grid-area: digital;
+  background-color: white;
+  padding: 75px;
+  border-radius: 25px 25px 0px 0px;}
+
+.drawing { grid-area: drawing;
+  background-color: white;
+  padding: 0px 75px 75px 75px;}
+
+.photo { grid-area: photo;
+  background-color: white;
+  padding: 0px 75px 75px 75px;}
+
+.web { grid-area: web;
+  background-color: white;
+  padding: 0px 75px 75px 75px;
+  border-radius: 0px 0px 25px 25px;}
+
+.footer { grid-area: footer;
+  text-align: center;
+  font-size: 60px;
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  background-color: black;
+  padding-top: 15px;
+  padding-bottom: 20px}
+
+/*FOOTER ICONS*/
+.fa {
+  padding: 37px;
+  width: 50px;
+  text-decoration: none;
+  margin: 20px 32px;
+  border-radius: 25%;
+  color: white;}
+
+/*CHECKS TO SEE IF GRID IS SUPPORTED*/
+@supports (grid-area: auto) {
+
+/*LAYOUT CHANGES TO 4 COLUMNS/IMAGE RESOLUTION SCALES/NAV FLEXES*/
+@media (min-width: 875px) {
+.grid-container-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "nav nav nav nav"
+    "digital digital drawing drawing"
+    "photo photo web web"
+    "footer footer footer footer";}
+  
+#main {display: none;}
+
+.header {display: block;
+  float: right;}
+
+.nav a {display: block}
+
+.nav ul {
+  display: flex;
+  justify-content: left;}
+  
+.digital { grid-area: digital;
+  padding: 50px 25px 25px 50px;
+  border-radius: 25px 0px 0px 0px;}
+
+.drawing { grid-area: drawing;
+  padding: 50px 50px 25px 25px;
+  border-radius: 0px 25px 0px 0px;}
+
+.photo { grid-area: photo;
+  padding: 25px 25px 50px 50px;
+  border-radius: 0px 0px 0px 25px;}
+
+.web { grid-area: web;
+  padding: 25px 50px 50px 25px;
+  border-radius: 0px 0px 25px 0px;}
+
+.fa {margin: 20px 15px;}
+}
+}
